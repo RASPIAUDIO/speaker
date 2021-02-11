@@ -174,7 +174,6 @@ void playWav(char* n)
    int l;
    bool mono;
    size_t t;
-   return; /////////////////////////////////////////////////////////////////////
    File f = SPIFFS.open(n, FILE_READ);
    l = (int) f.read(b, sizeof(b));
    if (b[22] == 1) mono = true; else mono = false;  
@@ -684,7 +683,7 @@ for(int i = 0; i < 53; i++)
 }
  void loop(){
      delay(100);
-/*
+
  // volume change
  // 
       oldVol = vol; 
@@ -765,7 +764,7 @@ for(int i = 0; i < 53; i++)
 
 //  printf("SD %d  AUX %d  HPD %d\n",vsdd,vauxd,gpio_get_level(HPD));
 
- */  
+   
 /*
       int volp;
       volp = touchRead(PL);
